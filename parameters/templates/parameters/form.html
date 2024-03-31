@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      input {
+        margin: 5px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--NOTE: the / represents the home/index page. if there are no other paths set in URL at the project level.
+    in order words, if the url pattern at the project level is simple an empty string, then you need /-->
+    <form action="/getdata/" method="post">
+      <!-- prevents cross site scirpting attacks-->
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="name" />
+      
+      <label for="id">ID: </label>
+      <input type="text" name="id" , id="id" placeholder="id" />
+      <input type="submit" value="login" />
+    </form>
+  </body>
+</html>
